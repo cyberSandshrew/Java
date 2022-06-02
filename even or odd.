@@ -1,0 +1,24 @@
+//Implement the EvenOdd application that asks a user to enter an integer. Display a statement that indicates whether the integer is even or odd.
+
+import java.util.Scanner;
+class EvenOdd {
+    public static void main(String[] args) {
+         // accept user input and check if number is even or odd
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer >> ");
+        int num = input.nextInt();
+
+        boolean remainder = isEven(num);
+        if (remainder == true)
+            System.out.println("The integer entered is even.");
+        else
+            System.out.println("The integer entered is odd.");
+    }
+    public static boolean isEven(int number) {
+        if (number % 2 == 0)
+            return true;
+        else
+            return false;
+
+    }
+}
