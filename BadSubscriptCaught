@@ -1,0 +1,33 @@
+Write an application in which you declare an array of eight first names. 
+Write a try block in which you prompt the user for an integer and display the name in the requested position.
+Create a catch block that catches the potential ArrayIndexOutOfBoundsException thrown when the user enters a number
+that is out of range.
+The catch block also should display the error message 
+
+
+
+
+import java.util.*;
+public class BadSubscriptCaught
+{
+   public static void main(String[] args)
+   {
+      String[] names = {"Ariel", "Brad", "Clifford", "Denise", "Emily",
+        "Fred", "Gina", "Henry"};
+      Scanner keyboard = new Scanner(System.in);
+      int number;
+     
+
+        System.out.println("Enter index position: ");
+   number=keyboard.nextInt();
+ 
+   try{
+       System.out.println("Name is: "+names[number]);
+   }
+   catch(ArrayIndexOutOfBoundsException e)
+   {
+       System.out.println("Subscript out of range");
+   }
+      // your code here
+   }
+}
